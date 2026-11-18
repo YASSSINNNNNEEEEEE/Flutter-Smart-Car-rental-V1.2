@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'SignupPage.dart';
 import 'HomePage.dart';
 
-/// Shared pink theme color used across the whole app
+
 const Color kPink = Color(0xFFD32381);
 
 void main(){

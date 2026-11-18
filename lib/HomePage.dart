@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// TODO: Change these paths if your files are named differently
 import 'loginPage.dart';
 import 'SignupPage.dart';
 
@@ -54,13 +53,9 @@ class HomePage extends StatelessWidget {
   }
 }
 
-// Affiche 120.0 -> "120" et 160.5 -> "160.5"
 String fmt(double n) =>
     n == n.roundToDouble() ? n.toStringAsFixed(0) : n.toStringAsFixed(1);
 
-// ==========================================
-// 1. VEHICLE CARD
-// ==========================================
 Widget buildVehiculeCard(Vehicule v, {VoidCallback? onTap, VoidCallback? onReserver}) {
   return Card(
     elevation: 2,
@@ -216,9 +211,6 @@ Widget buildVehiculeCard(Vehicule v, {VoidCallback? onTap, VoidCallback? onReser
   );
 }
 
-// ==========================================
-// 2. THE CATALOGUE SCREEN (Grid of cars)
-// ==========================================
 class CatalogueVehiculesScreen extends StatefulWidget {
   const CatalogueVehiculesScreen({super.key});
 
@@ -239,7 +231,6 @@ class _CatalogueVehiculesScreenState extends State<CatalogueVehiculesScreen> {
       appBar: AppBar(
         title: const Text("TSCR - Véhicules"),
         actions: [
-          // Button 1: Se Connecter
           Padding(
             padding: const EdgeInsets.only(right: 8.0, top: 8.0, bottom: 8.0),
             child: ElevatedButton(
@@ -256,8 +247,6 @@ class _CatalogueVehiculesScreenState extends State<CatalogueVehiculesScreen> {
                   style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
             ),
           ),
-
-          // Button 2: S'inscrire
           Padding(
             padding: const EdgeInsets.only(right: 12.0, top: 8.0, bottom: 8.0),
             child: ElevatedButton(
@@ -278,7 +267,6 @@ class _CatalogueVehiculesScreenState extends State<CatalogueVehiculesScreen> {
       ),
       body: Column(
         children: [
-          // Promo switch
           Container(
             color: Colors.white,
             child: SwitchListTile(
@@ -291,7 +279,6 @@ class _CatalogueVehiculesScreenState extends State<CatalogueVehiculesScreen> {
             ),
           ),
 
-          // Grid of vehicles
           Expanded(
             child: GridView.builder(
               padding: const EdgeInsets.all(12),
@@ -323,9 +310,6 @@ class _CatalogueVehiculesScreenState extends State<CatalogueVehiculesScreen> {
   }
 }
 
-// ==========================================
-// 3. THE DETAIL SCREEN (Single car info)
-// ==========================================
 class DetailVehiculeScreen extends StatefulWidget {
   final Vehicule vehicule;
   const DetailVehiculeScreen({super.key, required this.vehicule});
@@ -396,8 +380,6 @@ class _DetailVehiculeScreenState extends State<DetailVehiculeScreen> {
                   ],
                 ),
                 const SizedBox(height: 16),
-
-                // Price
                 if (v is VehiculePromo)
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
@@ -448,7 +430,6 @@ class _DetailVehiculeScreenState extends State<DetailVehiculeScreen> {
 
                 const SizedBox(height: 20),
 
-                // Days selector
                 Card(
                   elevation: 0,
                   color: Colors.white,
@@ -489,7 +470,6 @@ class _DetailVehiculeScreenState extends State<DetailVehiculeScreen> {
 
                 const SizedBox(height: 16),
 
-                // Total
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(16),
@@ -546,9 +526,6 @@ class _DetailVehiculeScreenState extends State<DetailVehiculeScreen> {
   }
 }
 
-// ==========================================
-// 4. THE DATA MODELS (Based on your UML)
-// ==========================================
 class Vehicule {
   String marque;
   String modele;
@@ -594,9 +571,6 @@ class VehiculePromo extends Vehicule {
   double get prixApresReductionCalculated => prixApresReduction;
 }
 
-// ==========================================
-// 5. THE MOCK DATA
-// ==========================================
 var listeVehicules = [
   Vehicule(
     marque: 'Dacia',
@@ -612,7 +586,7 @@ var listeVehicules = [
     marque: 'Kia',
     modele: 'Picanto',
     immatriculation: 'TN-999-888',
-    photoUrl: 'https://cdn-icons-png.flaticon.com/512/3202/3202926.png',
+    photoUrl: 'https://pngimg.com/uploads/kia/kia_PNG62.png',
     prixParJour: 90,
     ville: 'Sousse',
     carburant: 'Essence',
