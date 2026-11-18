@@ -164,6 +164,10 @@ class signupPage extends StatelessWidget{
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(content: Text('Le numéro de téléphone doit contenir 8 chiffres')),
                               );
+                            } else if (!RegExp(r'^[0-9]+$').hasMatch(telController.text)) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text('Le numéro de téléphone doit contenir uniquement des chiffres')),
+                               );
                             } else if (!emailController.text.contains('@')) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(content: Text('Email incorrect')),

@@ -570,13 +570,13 @@ class VehiculePromo extends Vehicule {
   @override
   double get prixApresReductionCalculated => prixApresReduction;
 }
-
 var listeVehicules = [
   Vehicule(
     marque: 'Dacia',
     modele: 'Logan',
-    immatriculation: 'TN-123-456',
-    photoUrl: 'https://cdn-icons-png.flaticon.com/512/3202/3202926.png',
+    immatriculation: '177 TN 8390',
+    // Real Dacia Logan image
+    photoUrl: 'https://images.pexels.com/photos/19922984/pexels-photo-19922984.jpeg',
     prixParJour: 120,
     ville: 'Tunis',
     carburant: 'Diesel',
@@ -585,8 +585,9 @@ var listeVehicules = [
   Vehicule(
     marque: 'Kia',
     modele: 'Picanto',
-    immatriculation: 'TN-999-888',
-    photoUrl: 'https://pngimg.com/uploads/kia/kia_PNG62.png',
+    immatriculation: '196 TN 1231',
+    // Real Kia Picanto image
+    photoUrl: 'https://images.pexels.com/photos/20475125/pexels-photo-20475125.jpeg',
     prixParJour: 90,
     ville: 'Sousse',
     carburant: 'Essence',
@@ -595,8 +596,9 @@ var listeVehicules = [
   VehiculePromo(
     marque: 'Hyundai',
     modele: 'Tucson',
-    immatriculation: 'TN-555-444',
-    photoUrl: 'https://cdn-icons-png.flaticon.com/512/3202/3202926.png',
+    immatriculation: '201 TN 7642',
+    // Real Hyundai SUV image
+    photoUrl: 'https://images.pexels.com/photos/27629970/pexels-photo-27629970.jpeg',
     prixParJour: 200,
     ville: 'Tunis',
     carburant: 'Hybride',
@@ -606,8 +608,9 @@ var listeVehicules = [
   Vehicule(
     marque: 'Mercedes',
     modele: 'Classe C',
-    immatriculation: 'TN-777-111',
-    photoUrl: 'https://cdn-icons-png.flaticon.com/512/3202/3202926.png',
+    immatriculation: '222 TN 7883',
+    // Real Mercedes image
+    photoUrl: 'https://images.pexels.com/photos/27019870/pexels-photo-27019870.jpeg',
     prixParJour: 350,
     ville: 'Hammamet',
     carburant: 'Diesel',
@@ -616,12 +619,14 @@ var listeVehicules = [
   VehiculePromo(
     marque: 'Volkswagen',
     modele: 'Golf 8',
-    immatriculation: 'TN-222-333',
-    photoUrl: 'https://cdn-icons-png.flaticon.com/512/3202/3202926.png',
+    immatriculation: '246 TN 2183',
+    // Real Volkswagen Golf image
+    photoUrl: 'https://images.pexels.com/photos/18517136/pexels-photo-18517136.jpeg',
     prixParJour: 180,
     ville: 'Sfax',
     carburant: 'Essence',
     transmission: 'Automatique',
     reduction: 15,
   ),
+
 ];
